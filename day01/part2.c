@@ -65,13 +65,15 @@ int main(int argc, char **argv) {
 
         // Rotate
         // sleep(1);
-        printf("start SC=%d %d[%d]=", zero_count, d->tick, rotation);
+        int start_count = zero_count;
+        int start_tick = d->tick;
+
         int turns = rotate(d, rotation);
         zero_count += turns;
-        printf("%d - ", d->tick);
-        printf("FC=%d\n", zero_count);
+
+        printf("ROT: %d, Dial: %d->%d, Zero count: %d->%d\n", rotation, start_tick, d->tick, start_count, zero_count);
     }
 
-    printf("END d->tick=%d, d->len=%d, zero_count=%d\n", d->tick, d->len, zero_count);
+    printf("END: Dial: %d, Len: %d, Zero count: %d\n", d->tick, d->len, zero_count);
 }
 
