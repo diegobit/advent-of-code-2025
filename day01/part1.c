@@ -50,4 +50,6 @@ int main(int argc, char **argv) {
     }
 
     printf("END d->tick=%d, d->len=%d, zero_count=%d\n", d->tick, d->len, zero_count);
+
+    free(d);
 }

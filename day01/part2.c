@@ -75,5 +75,7 @@ int main(int argc, char **argv) {
     }
 
     printf("END: Dial: %d, Len: %d, Zero count: %d\n", d->tick, d->len, zero_count);
+
+    free(d);
 }
 
